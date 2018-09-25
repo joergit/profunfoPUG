@@ -1,0 +1,38 @@
+//- DOCTYPE
+doctype html
+
+//- TAGS
+    Pug reconoce automáticamente los self closing tags, aunque se puede explicitar.
+html(lang="ES")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Pug NodeJS
+  body
+    //- EXPANSIÓN EN BLOQUE
+    ul
+      li: a(href="#") Enlace
+      li: a(href="#") Enlace
+      li: a(href="#") Enlace
+    
+    //- ESPACIOS EN BLANCO
+        Pug elimina los espacios en blanco finales de los contenidos de las etiquetas.
+    p Hola soy un texto en <b>negrita</b>
+    p Hola soy un texto
+      |  de ejemplo
+      span  span
+      b  negrita
+      i  itálica
+
+    //- CONDICIONALES (IF -ELSE IF - ELSE)
+    -var edad = 32
+    if (edad <= 0)
+      p Edad incorrecta
+    else if (edad < 18)
+      p Eres menor de edad
+    else
+      p Eres mayor de edad
+
+    //- ATRIBUTOS
+    
